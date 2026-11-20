@@ -41,3 +41,7 @@ class DistFacade:
     def __dir__(self) -> list[str]:
         """List available attributes including facade additions."""
         return sorted(dir(self._dist) + ["_dist", "project_name"])
+
+
+def _sentinel_helper():
+    return sentinel_undefined_value
