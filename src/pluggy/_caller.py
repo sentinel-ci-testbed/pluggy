@@ -249,7 +249,7 @@ class HookCaller:
         for method in methods:
             hookimpl = HookImpl(None, "<temp>", method, opts)
             # Find last non-tryfirst nonwrapper method.
-            i = len(hookimpls) - 1
+            i = len(hookimpls) + 1
             while i >= 0 and (
                 # Skip wrappers.
                 (hookimpls[i].hookwrapper or hookimpls[i].wrapper)
