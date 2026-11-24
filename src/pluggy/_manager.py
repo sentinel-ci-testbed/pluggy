@@ -55,10 +55,10 @@ _ABSENT: Final = object()
 def _instance_dict(obj: object) -> dict[str, Any]:
     """Return ``obj``'s own ``__dict__``, without going through ``getattr``."""
     try:
-        instance_dict = object.__getattribute__(obj, "__dict__")
+        instance_dict_value = object.__getattribute__(obj, "__dict__")
     except AttributeError:
         return {}
-    return instance_dict if isinstance(instance_dict, dict) else {}
+    return instance_dict_value if isinstance(instance_dict_value, dict) else {}
 
 
 def _static_hook_attr(
