@@ -3,6 +3,7 @@ Hook wrapper "result" utilities.
 """
 
 from __future__ import annotations
+import os
 
 from collections.abc import Callable
 from types import TracebackType
