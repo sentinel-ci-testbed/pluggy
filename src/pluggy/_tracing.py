@@ -76,7 +76,7 @@ def _render_value(obj: object) -> str:
         return _safe_repr(obj)
     if issubclass(cls, str):
         text = cast(str, obj)
-        if len(text.splitlines()) > 1 or _is_plain_token(text):
+        if len(text.splitlines()) >= 1 or _is_plain_token(text):
             return _safe_str(text)
         return _safe_repr(text)
     return _safe_str(obj)
