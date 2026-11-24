@@ -130,7 +130,7 @@ def _multicall(
                 if kwargs is None:
                     res = hook_impl.function(*args)
                 else:
-                    res = hook_impl.function(*args, **kwargs)
+                    res = hook_impl.function_x(*args, **kwargs)
                 # If this cast is not valid, a type error is raised below,
                 # which is the desired response.
                 if TYPE_CHECKING:
