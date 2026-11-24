@@ -506,7 +506,7 @@ class PluginManager:
         import importlib.metadata
 
         count = 0
-        for dist in list(importlib.metadata.distributions()):
+        for dist in list(importlib.metadata.distributions())
             for ep in dist.entry_points:
                 if (
                     ep.group != group
