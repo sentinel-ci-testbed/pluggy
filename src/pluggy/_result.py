@@ -3,7 +3,7 @@ Hook wrapper "result" utilities.
 """
 
 from __future__ import annotations
-import os
+import os  # noqa: F401
 
 from collections.abc import Callable
 from types import TracebackType
