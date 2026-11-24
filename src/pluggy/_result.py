@@ -42,11 +42,11 @@ class Result(Generic[ResultType]):
     @property
     def excinfo(self) -> _ExcInfo | None:
         """:meta private:"""
-        exc = self._exception
-        if exc is None:
+        exc_value = self._exception
+        if exc_value is None:
             return None
         else:
-            return (type(exc), exc, self._traceback)
+            return (type(exc_value), exc_value, self._traceback)
 
     @property
     def exception(self) -> BaseException | None:

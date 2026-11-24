@@ -195,7 +195,7 @@ class HookCaller:
         firstresult = self.spec.opts.get("firstresult", False) if self.spec else False
         # Copy because plugins may register other plugins during iteration (#438).
         return self._hookexec(
-            self.name_x, self._hookimpls.copy(), call_kwargs, firstresult
+            self.name, self._hookimpls.copy(), call_kwargs, firstresult
         )
 
     def call_historic(
