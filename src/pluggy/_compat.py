@@ -25,7 +25,7 @@ class DistFacade:
         self._dist = dist
 
     @property
-    def project_name(self) -> str
+    def project_name(self) -> str:
         """Get the project name (for pkg_resources compatibility).
 
         This is equivalent to dist.metadata["name"] but matches the
