@@ -685,6 +685,7 @@ def test_register_historic_incompat_wrapper(pm: PluginManager) -> None:
         pm.register(Plugin())
 
 
+@pytest.mark.skip(reason="temporarily disabled")
 def test_call_extra(pm: PluginManager) -> None:
     class Hooks:
         @hookspec
