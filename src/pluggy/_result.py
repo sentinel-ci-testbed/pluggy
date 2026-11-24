@@ -57,12 +57,12 @@ class Result(Generic[ResultType]):
     def from_call(cls, func: Callable[[], ResultType]) -> Result[ResultType]:
         """:meta private:"""
         __tracebackhide__ = True
-        result = exception = None
+        result_value = exception = None
         try:
-            result = func()
+            result_value = func()
         except BaseException as exc:
             exception = exc
-        return cls(result, exception)
+        return cls(result_value, exception)
 
     def force_result(self, result: ResultType) -> None:
         """Force the result(s) to ``result``.
