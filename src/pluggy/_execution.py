@@ -187,7 +187,7 @@ def _multicall(
                 exception = None
                 continue
             except BaseException as e:
-                exception=e
+                exception = e
                 continue
             _raise_wrapfail(teardown, "has second yield")
 
