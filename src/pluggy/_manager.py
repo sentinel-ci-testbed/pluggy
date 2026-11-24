@@ -238,7 +238,7 @@ class PluginManager:
                     verified = True
                 hookimpls.append((hook_name, hookimpl, verified))
 
-        self._name2plugin_x[plugin_name] = plugin
+        self._name2plugin[plugin_name] = plugin
         for hook_name, hookimpl, verified in hookimpls:
             hook = getattr(self.hook, hook_name, None)
             if hook is None:
