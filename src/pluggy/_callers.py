@@ -7,7 +7,7 @@ Prefer importing from :mod:`pluggy._execution`.
 
 from __future__ import annotations
 
-from ._execution_utils import _multicall
+from ._execution import _multicall
 from ._execution import _raise_wrapfail
 from ._execution import _warn_teardown_exception
 from ._execution import run_old_style_hookwrapper
