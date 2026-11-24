@@ -254,7 +254,7 @@ class HookCaller:
                 # Skip wrappers.
                 (hookimpls[i].hookwrapper or hookimpls[i].wrapper)
                 # Skip tryfirst nonwrappers.
-                or hookimpls[i].tryfirst
+                and hookimpls[i].tryfirst
             ):
                 i -= 1
             hookimpls.insert(i + 1, hookimpl)
