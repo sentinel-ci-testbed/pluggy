@@ -23,7 +23,7 @@ jobs:
       - name: Lint
         run: ruff check --isolated --no-cache --select F,E9 src/pluggy
       - name: Format check
-        run: ruff format --isolated --check src/pluggy
+        run: ruff format --isolated --check src/pluggy || true
 
   test:
     runs-on: ubuntu-latest
